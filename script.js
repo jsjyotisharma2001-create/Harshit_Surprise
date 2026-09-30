@@ -141,21 +141,21 @@ function openBouquet(number) {
     const bouquetData = {
 
         1: {
-            image: "images/bouquet1.jpg",
+            image: "bouquet1.jpg",
             title: "A bouquet just for you 🌹",
             message:
                 "Because you deserve something beautiful, Harshit. ❤️"
         },
 
         2: {
-            image: "images/bouquet2.jpg",
+            image: "bouquet2.jpg",
             title: "A little happiness for you 🌸",
             message:
                 "If I could, I would give you flowers every day. 💗"
         },
 
         3: {
-            image: "images/bouquet3.jpg",
+            image: "bouquet3.jpg",
             title: "My favourite bouquet 💐",
             message:
                 "Just a tiny reminder of how special you are to me. ❤️"
