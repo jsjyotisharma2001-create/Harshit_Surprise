@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Harshit ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PASSWORD SCREEN
+    ========================== -->
+
+    <div id="passwordScreen" class="screen">
+
+        <div class="password-box">
+
+            <img
+                src="images/main.jpg"
+                class="main-photo"
+                alt="Our Photo"
+            >
+
+            <h1>For My Favourite Person ❤️</h1>
+
+            <h2>Harshit</h2>
+
+            <p>
+                I made something special just for you...
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter our secret code"
+            >
+
+            <button onclick="checkPassword()">
+                Open My Heart 💗
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </div>
+
+
+<!-- =========================
+     MAIN SURPRISE PAGE
+========================= -->
+
+<div id="mainPage" class="hidden">
+
+    <!-- BOUQUET INTRO -->
+
+    <section class="bouquet-page">
+
+        <h1 class="bouquet-title">
+            Girl, save this for Boyfriend's Day 💌😭
+        </h1>
+
+        <div class="bouquet-browser">
+
+            <!-- Browser top bar -->
+
+            <div class="browser-top">
+
+                <div class="browser-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="browser-tab">
+                    ♡
+                </div>
+
+                <div class="browser-tab">
+                    ♡
+                </div>
+
+                <div class="browser-address">
+                    💗 A little surprise for you...
+                </div>
+
+            </div>
+
+
+            <!-- Browser content -->
+
+            <div class="bouquet-content">
+
+                <div class="stars star1">★</div>
+                <div class="stars star2">★</div>
+                <div class="stars star3">★</div>
+                <div class="stars star4">★</div>
+                <div class="stars star5">★</div>
+
+                <h2>
+                    CLICK ON ANY BOUQUET TO OPEN
+                </h2>
+
+
+                <div class="bouquet-slider">
+
+                    <!-- LEFT ARROW -->
+
+                    <button
+                        class="slider-arrow left"
+                        onclick="previousBouquet()">
+                        ❮
+                    </button>
+
+
+                    <!-- BOUQUET 1 -->
+
+                    <div
+                        class="bouquet-card active"
+                        onclick="openBouquet(1)">
+
+                        <img
+                            src="images/bouquet1.jpg"
+                            alt="Romantic rose bouquet">
+
+                    </div>
+
+
+                    <!-- BOUQUET 2 -->
+
+                    <div
+                        class="bouquet-card"
+                        onclick="openBouquet(2)">
+
+                        <img
+                            src="images/bouquet2.jpg"
+                            alt="Pink flower bouquet">
+
+                    </div>
+
+
+                    <!-- BOUQUET 3 -->
+
+                    <div
+                        class="bouquet-card"
+                        onclick="openBouquet(3)">
+
+                        <img
+                            src="images/bouquet3.jpg"
+                            alt="Romantic lily bouquet">
+
+                    </div>
+
+
+                    <!-- RIGHT ARROW -->
+
+                    <button
+                        class="slider-arrow right"
+                        onclick="nextBouquet()">
+                        ❯
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="bouquet-hint">
+            Tap a bouquet, my love 🌷
+        </p>
+
+
+        <!-- CONTINUE BUTTON -->
+
+        <button
+            class="continue-button"
+            onclick="showWelcome()">
+
+            There's more for you ❤️
+
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         BOUQUET POPUP
+    ========================== -->
+
+    <div id="bouquetModal" class="modal">
+
+        <div class="modal-content bouquet-modal">
+
+            <button
+                class="close"
+                onclick="closeModal('bouquetModal')">
+
+                ×
+
+            </button>
+
+
+            <h2 id="bouquetModalTitle">
+                This one is for you ❤️
+            </h2>
+
+
+            <img
+                id="selectedBouquet"
+                src=""
+                alt="Selected bouquet"
+                class="selected-bouquet"
+            >
+
+
+            <p id="bouquetMessage">
+                A little bouquet for the most special person. 🌸
+            </p>
+
+
+            <button
+                class="continue-button"
+                onclick="showWelcome(); closeModal('bouquetModal');">
+
+                Open the next surprise 💌
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         WELCOME SECTION
+    ========================== -->
+
+    <section
+        id="welcomeSection"
+        class="welcome-section hidden">
+
+        <div class="welcome">
+
+            <h1>
+                Welcome, Harshit ❤️
+            </h1>
+
+            <p>
+                There are three little surprises
+                waiting for you...
+            </p>
+
+            <p class="small">
+                Tap them one by one ✨
+            </p>
+
+        </div>
+
+
+        <!-- THREE BOKEH BUTTONS -->
+
+        <div class="bokeh-container">
+
+
+            <div
+                class="bokeh note-bokeh"
+                onclick="openNote()">
+
+                💌
+
+                <span>
+                    A Note
+                </span>
+
+            </div>
+
+
+            <div
+                class="bokeh song-bokeh"
+                onclick="openSong()">
+
+                🎵
+
+                <span>
+                    Our Song
+                </span>
+
+            </div>
+
+
+            <div
+                class="bokeh letter-bokeh"
+                onclick="openLetter()">
+
+                💖
+
+                <span>
+                    My Heart
+                </span>
+
+            </div>
+
+
+        </div>
+
+<!-- =================================
+     LAST BUT NOT LEAST
+================================= -->
+
+<div class="last-surprise">
+
+    <button
+        class="last-button"
+        onclick="openFinalSurprise()">
+
+        💗 Last But Not Least 💗
+
+    </button>
+
+</div>
+
+
+    <!-- =========================
+         NOTE POPUP
+    ========================== -->
+
+    <div id="noteModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close"
+                onclick="closeModal('noteModal')"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                💌 A Little Note For You
+            </h2>
+
+
+            <p>
+                Harshit,
+            </p>
+
+
+            <p>
+                You are one of the most special people
+                in my life.
+            </p>
+
+
+            <p>
+                Thank you for all the little moments,
+                conversations, laughter and memories
+                we have shared.
+            </p>
+
+
+            <p>
+                Sometimes the smallest moments with you
+                become my favourite memories. ❤️
+            </p>
+
+
+            <p>
+                I hope this little surprise makes you smile.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         SONG POPUP
+    ========================== -->
+
+    <div id="songModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close"
+                onclick="closeModal('songModal')"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                🎵 A Song For You
+            </h2>
+
+
+            <p>
+                This song reminded me of you. ❤️
+            </p>
+
+
+            <!--
+
+            WE WILL ADD YOUR YOUTUBE
+            VIDEO HERE LATER.
+
+            -->
+
+           <div class="youtube-container">
+    <iframe
+        width="100%"
+        height="250"
+        src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+        title="Our Song ❤️"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         LOVE LETTER
+    ========================== -->
+
+    <div id="letterModal" class="modal">
+
+        <div class="modal-content letter">
+
+            <button
+                class="close"
+                onclick="closeModal('letterModal')"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                💖 To Harshit
+            </h2>
+
+
+
+            <!-- PHOTOS -->
+
+            <div class="photos">
+
+                <img
+                    src="images/photo1.jpg"
+                    alt="Memory 1"
+                >
+
+                <img
+                    src="images/photo2.jpg"
+                    alt="Memory 2"
+                >
+
+                <img
+                    src="images/photo3.jpg"
+                    alt="Memory 3"
+                >
+
+            </div>
+
+
+
+            <!-- LOVE LETTER -->
+
+            <div class="love-letter">
+
+                <p>
+                    My Love,
+                </p>
+
+
+                <p>
+                    I don't think words will ever be enough
+                    to explain what you mean to me.
+                </p>
+
+
+                <p>
+                    Somewhere between our conversations,
+                    our silly moments, our laughter,
+                    our little fights and all the memories
+                    we've created, you became such an
+                    important part of my life.
+                </p>
+
+
+                <p>
+                    I love all the little things about us
+                    that make our story ours.
+                </p>
+
+
+                <p>
+                    Thank you for being there,
+                    for making me smile and for being
+                    a beautiful part of my life.
+                </p>
+
+
+                <p>
+                    No matter how many memories we create,
+                    I hope we always keep making more.
+                </p>
+
+
+                <p>
+                    You are special to me, Harshit. ❤️
+                </p>
+
+
+                <p>
+                    Always yours,
+                    <br>
+                    <strong>
+                        Your Girl ❤️
+                    </strong>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+<!-- =================================
+     FINAL LOVE POPUP
+================================= -->
+
+<div id="finalModal" class="modal">
+
+    <div class="modal-content final-love-modal">
+
+        <button
+            class="close"
+            onclick="closeModal('finalModal')">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            💗 Last But Not Least...
+        </h2>
+
+
+        <!-- HEART -->
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+
+        <div class="final-love-text">
+
+            <p>
+                Harshit,
+            </p>
+
+            <p>
+                If you ever wonder how much I love you,
+                I hope you remember that it's not just in
+                the big moments.
+            </p>
+
+            <p>
+                It's in every little thought of you,
+                every smile your name brings to my face,
+                every conversation I never want to end,
+                and every memory I wish I could live
+                just one more time.
+            </p>
+
+            <p class="quote">
+                “I don't just love you for who you are.
+                I love the way my heart feels when
+                I'm with you.”
+            </p>
+
+            <p>
+                You have become a beautiful part of my
+                world, and no number of words could ever
+                completely explain what you mean to me.
+            </p>
+
+            <p>
+                If I had to choose again, through every
+                moment, every laugh, every little fight
+                and every beautiful memory...
+            </p>
+
+            <p class="forever">
+                I would still choose you. ❤️
+            </p>
+
+            <p>
+                Always and forever,
+                <br>
+
+                <strong>
+                    Your Girl ❤️
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
