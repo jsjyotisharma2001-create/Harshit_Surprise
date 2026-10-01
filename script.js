@@ -142,23 +142,23 @@ function openBouquet(number) {
 
         1: {
             image: "bouquet1.jpg",
-            title: "A bouquet just for you 🌹",
+            title: "A Confession 🌹",
             message:
-                "Because you deserve something beautiful, Harshit. ❤️"
+                "If this Bouquet could speak, it would tell you that somewhere between our little conversations, your smile and the feeling of your presence has became a part of my everyday thought. These flowers are just small way of saying that you are incredibly special to me my cutiepie. ❤️"
         },
 
         2: {
             image: "bouquet2.jpg",
-            title: "A little happiness for you 🌸",
+            title: "A Promise 🌸",
             message:
-                "If I could, I would give you flowers every day. 💗"
+                "I Can't promise you that every day will be perfect, but I can promise to be there through the beautiful days and the difficult ones--to listen, to understand, to keep choosing you, and to never ever take what we have for granted. 💗"
         },
 
         3: {
             image: "bouquet3.jpg",
-            title: "My favourite bouquet 💐",
+            title: "A Little Forever 💐",
             message:
-                "Just a tiny reminder of how special you are to me. ❤️"
+                "If I could ask life for just one think, it would be a forever with you--more ordinary days, more silly moments, more flowers, more memories and your hand in mine through all of it. ❤️"
         }
 
     };
